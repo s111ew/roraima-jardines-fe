@@ -5,19 +5,19 @@ import instagramIcon from "../assets/instagram_black.svg"
 
 function Footer() {
   return (
-    <footer>
+    <footer className="section">
       <h2>Consulta Con Nosotros</h2>
       <div className="form-container" >
-        <p>
+        <p className="contact-info">
           <span>Si necesitas contactarnos por algo, escríbenos aquí y te responderemos lo antes posible.</span>
           <span>También puedes llamarnos o visitarnos:</span>
           <span>Teléfono<br></br>+34 616626407</span>
         </p>
         <form action="">
-          <Input text="Nombre*" />
-          <Input text="Email*" />
-          <Input text="Mensaje*" />
-          <Button text="Enviar Mensaje" />
+          <Input text="Nombre*" isTextArea={false} />
+          <Input text="Email*" isTextArea={false} />
+          <Input text="Mensaje*" isTextArea={true} />
+          <Button text="Enviar mensaje" />
         </form>
       </div>
       <h2>Síguenos en redes</h2>
@@ -30,6 +30,10 @@ function Footer() {
           <img src={ instagramIcon }></img>
           <span>Instagram</span>
         </div>
+      </div>
+      <div className="credit-container">
+        <span>Copyright © 2025 Roraima Jardines</span>
+        <div className="accordian-placeholder"></div>
       </div>
     </footer>
   )
