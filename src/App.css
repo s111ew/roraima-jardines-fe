@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Sen";
+  src: url(./assets/Sen_variable.woff2);
+}
+
+body {
+  font-family: "Sen", Arial, Helvetica, sans-serif;
+}
