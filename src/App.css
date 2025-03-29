@@ -65,6 +65,7 @@ html {
     rgba(32, 53, 34, 1) 100%
   );
   --product-cards-background: linear-gradient(180deg, #375d3c 0%, #548d5b 100%);
+  --testimonial-background: linear-gradient(180deg, #69a671 0%, #99c79f 100%);
   --footer-background: linear-gradient(180deg, #cadecb 0%, #e5eee5 99.7%);
 }
 
@@ -98,7 +99,7 @@ p {
   gap: 38px;
 }
 
-.product-cards {
+section {
   background: var(--product-cards-background);
   display: flex;
   flex-direction: column;
@@ -179,6 +180,99 @@ p {
   align-self: flex-start;
 }
 
+.testimonials {
+  background: var(--testimonial-background);
+}
+
+.testimonials > h2 {
+  padding: 32px 0px;
+  color: var(--off-white);
+}
+
+.testimonials-container {
+  display: flex;
+  gap: 40px;
+  padding: 32px 0px;
+}
+
+.testimonial-card {
+  width: 357px;
+  height: 228px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--off-white);
+  border-radius: 33px;
+  padding: 25px;
+}
+
+.testimonial-top {
+  position: relative;
+}
+
+.quote-icon {
+  position: absolute;
+}
+
+.quote-icon.start {
+  top: -5px;
+  left: -10px;
+}
+
+.quote-icon.end {
+  bottom: -5px;
+  right: 0px;
+}
+
+.testimonial-bottom {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+}
+
+.testimonial-photo {
+  width: 96px;
+  height: 78px;
+  border-radius: 8px;
+}
+
+.testimonial-information {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.testimonial-images {
+  display: flex;
+  gap: 32px;
+  padding: 72px 0px;
+}
+
+.testimonial-images > img {
+  border-radius: 12px;
+}
+
+#homepage-img-12 {
+  width: 200px;
+  height: 194px;
+}
+#homepage-img-13 {
+  width: 262px;
+  height: 348px;
+  align-self: flex-end;
+  margin-bottom: 50px;
+}
+#homepage-img-14 {
+  width: 186px;
+  height: 248px;
+}
+#homepage-img-15 {
+  width: 232px;
+  height: 383px;
+  align-self: flex-end;
+  margin-top: 124px;
+}
+
 footer {
   position: relative;
   z-index: -2;
@@ -187,13 +281,15 @@ footer {
   flex-direction: column;
   align-items: center;
   background: var(--footer-background);
+  padding: 32px 328px;
 }
 
 footer > h2 {
-  margin-bottom: 36px;
+  margin: 32px 0px;
 }
 
 .form-container {
+  padding: 16px 0px;
   display: grid;
   grid-template-columns: 50% 50%;
 }
@@ -208,6 +304,19 @@ form {
   display: flex;
   flex-direction: column;
   gap: 16.8px;
+  padding-right: 100px;
+}
+
+.social-media-container {
+  gap: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 48px;
+}
+
+.social-media-link {
+  display: flex;
+  gap: 5px;
 }
 
 .input-container {
@@ -263,10 +372,4 @@ form {
 .button-text {
   display: flex;
   gap: 10px;
-}
-
-@media screen and (min-width: 1401px) {
-  footer {
-    padding: 0px 328px;
-  }
 }

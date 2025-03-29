@@ -21,12 +21,12 @@ function Footer() {
         </form>
       </div>
       <h2>Síguenos en redes</h2>
-      <div className="links-container">
-        <div className="link facebook">
+      <div className="social-media-container">
+        <div className="social-media-link facebook">
           <img src={ facebookIcon }></img>
           <span>Facebook</span>
         </div>
-        <div className="link instagram">
+        <div className="social-media-link instagram">
           <img src={ instagramIcon }></img>
           <span>Instagram</span>
         </div>
