@@ -64,6 +64,11 @@ html {
     rgba(30, 51, 33, 1) 0%,
     rgba(32, 53, 34, 1) 100%
   );
+  --hero-background: linear-gradient(
+    180deg,
+    rgba(32, 53, 34, 1) 0%,
+    rgba(48, 82, 53, 1) 100%
+  );
   --product-cards-background: linear-gradient(180deg, #375d3c 0%, #548d5b 100%);
   --testimonial-background: linear-gradient(180deg, #69a671 0%, #99c79f 100%);
   --footer-background: linear-gradient(180deg, #cadecb 0%, #e5eee5 99.7%);
@@ -83,6 +88,9 @@ p {
 }
 
 .navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
   color: var(--off-white);
   display: flex;
   justify-content: space-between;
@@ -100,11 +108,61 @@ p {
 }
 
 section {
-  background: var(--product-cards-background);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.hero {
+  background: var(--hero-background);
+  padding: 168px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 192px;
+  color: var(--off-white);
+}
+
+.hero-main-container {
+  padding-left: 26%;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 192px;
+}
+
+.hero-main-container > h1 {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.hero-call-to-action > p {
+  font-size: 20px;
+  margin-bottom: 48px;
+}
+
+.hero-information-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 144px;
+}
+
+.hero-information {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.hero-information:nth-child(2) {
+  align-self: center;
+}
+.hero-information:nth-child(3) {
+  align-self: flex-end;
+}
+
+.product-cards {
+  background: var(--product-cards-background);
   padding: 48px 0px;
 }
 
@@ -182,6 +240,7 @@ section {
 
 .testimonials {
   background: var(--testimonial-background);
+  padding: 48px 0px;
 }
 
 .testimonials > h2 {
@@ -350,7 +409,6 @@ form {
   align-items: center;
   border-radius: 8px;
   padding: 8px 20px;
-  width: 100%;
   color: white;
   background-color: var(--green-basic);
   border: 1px solid transparent;
