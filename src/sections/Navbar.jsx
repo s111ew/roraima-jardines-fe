@@ -18,13 +18,13 @@ function Navbar() {
     };
   }, []);
 
-  const logoSize = Math.max(68, 120 - scrollValue)
+  const logoSize = Math.max(68, 150 - scrollValue)
 
   return (
     <nav className='navbar'>
       <img src={logo} alt="Roraima Jardines logo" style={{ width: `${logoSize}px`, transition: 'width 0.1s ease-out'  }}/>
       <ul className='links-container'>
-        <li className='link'>Productos</li>
+        <li className='link'><a href='../productos/index.html'>Productos</a></li>
         <li className='link'>Haz tu Jardín</li>
         <li className='link'>Nuestra Historia</li>
         <li className='link'>Contacto</li>
